@@ -27,8 +27,10 @@ location=location.add(v);
 PVector G(Obj other) {
 dir.x=location.x-other.location.x;
 dir.y=location.y-other.location.y;
-G.x=dir.x*(6.7*pow(10,-11)*mass/pow(dir.mag(),3));
-G.y=dir.y*(6.7*pow(10,-11)*mass/pow(dir.mag(),3));
+float dist=dir.mag();
+dist=constrain(dist,os+other.os,100000);
+G.x=dir.x*(6.7*pow(10,-11)*mass/pow(dist,3));
+G.y=dir.y*(6.7*pow(10,-11)*mass/pow(dist,3));
 return G;
 }
 //checking if 2 obj touch each other or not
