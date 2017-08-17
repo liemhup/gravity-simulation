@@ -1,7 +1,7 @@
 ArrayList<Obj> obj;
 ArrayList<PVector> Gtotal;
 ArrayList<Mobj> Mobj;
-
+float numberOfObj=30;
 
 
 void setup(){
@@ -12,7 +12,7 @@ obj=new ArrayList<Obj>();
 Gtotal=new ArrayList<PVector>();
 Mobj=new ArrayList<Mobj>();
 
-for (int i = 0;i<30;i++){
+for (int i = 0;i<mumOfObj;i++){
 Gtotal.add(new PVector());
 obj.add(new Obj());
 }
